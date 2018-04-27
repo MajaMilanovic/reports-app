@@ -1,0 +1,110 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif; }
+
+.container {
+  width: 90%;
+  margin: 0 auto; }
+
+.main-page-title-bar {
+  padding: 8px 0;
+  background-color: #f0f0f0;
+  overflow: auto; }
+
+.main-page-title {
+  display: inline-block; }
+
+.main-page-title-span {
+  display: inline-block;
+  float: right;
+  padding: 5px 15px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  border: 1px solid #b9b9b9;
+  clear: both;
+  font-size: 0.8rem; }
+
+.search-bar-wrapper {
+  margin: 20px auto; }
+
+#search-candidates {
+  float: right;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  background-image: url(http://www.metacritic.com/images/icons/search_active.png);
+  background-repeat: no-repeat;
+  padding: 5px 5px 5px 30px;
+  background-position: 5px 5px; }
+
+hr {
+  clear: both;
+  display: block;
+  margin: 15px 1px; }
+
+.card-wrapper {
+  width: 100%;
+  float: left;
+  margin: 0 auto;
+  padding: 5px; }
+
+.card {
+  -webkit-box-shadow: 0px 2px 5px 0px rgba(158, 158, 158, 0.63);
+  -moz-box-shadow: 0px 2px 5px 0px rgba(158, 158, 158, 0.63);
+  box-shadow: 0px 2px 5px 0px rgba(158, 158, 158, 0.63);
+  text-align: center;
+  height: 350px; }
+
+.card-img {
+  max-width: 80%;
+  max-height: 50%;
+  display: inline-block;
+  margin: 20px auto;
+  padding: 10px;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  border: 2px solid #b9b9b9; }
+
+.card-content-name {
+  font-size: 1.4rem;
+  margin: 0 auto; }
+
+.card-content-email {
+  padding: 10px;
+  margin-bottom: 10px;
+  color: #444444;
+  font-size: 0.8rem; }
+
+.hidden {
+  display: none; }
+
+.banner {
+  padding: 5px;
+  border: 1px solid #b9b9b9; }
+
+.errorDiv {
+  margin: 0 auto;
+  margin-top: 20px;
+  text-align: center; }
+  .errorDiv p {
+    padding: 10px;
+    font-size: 1.4rem; }
+
+@media (min-width: 768px) {
+  .card-wrapper {
+    width: 50%;
+    float: left;
+    margin: 0 auto;
+    padding: 5px; } }
+@media (min-width: 992px) {
+  .card-wrapper {
+    width: 25%;
+    float: left;
+    margin: 0 auto;
+    padding: 5px; } }
+
+/*# sourceMappingURL=main.css.map */

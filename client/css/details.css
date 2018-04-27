@@ -1,0 +1,89 @@
+article {
+  margin: 25px auto 0 auto; }
+
+button {
+  padding: 0;
+  border: none;
+  background: none; }
+
+.candidate-img-large {
+  width: 100%; }
+
+.table-candidate-details {
+  width: 100%; }
+
+.table-candidate-details td {
+  padding: 5px 0; }
+
+tr:nth-of-type(even) {
+  padding-left: 10px; }
+
+.table-title-small {
+  font-size: 0.8rem;
+  color: #b9b9b9; }
+
+.table-content td {
+  padding-left: 20px; }
+
+.p-title {
+  font-size: 1.4rem;
+  margin-bottom: 20px;
+  clear: both; }
+
+.table-interview-details {
+  margin: 0 auto 20px auto;
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+  text-align: center; }
+  .table-interview-details td {
+    border: 1px solid #7f7f7f;
+    margin: 0;
+    font-size: 0.8rem;
+    padding: 10px; }
+  .table-interview-details tr:nth-of-type(odd) {
+    background-color: #ececec; }
+
+.table-interview-details-header td {
+  vertical-align: baseline;
+  padding: 10px;
+  background-color: #cccccc; }
+
+.button-open-modal {
+  width: 3%;
+  text-align: center; }
+
+@media (min-width: 768px) {
+  .candidate-img-large {
+    width: 33%;
+    float: left;
+    margin-right: 5px; }
+
+  .table-candidate-details {
+    float: left;
+    width: 66%;
+    padding: 20px 0; }
+    .table-candidate-details td {
+      width: 50%; }
+    .table-candidate-details tr:nth-of-type(even) {
+      padding-left: 30px; }
+
+  .article-candidate-details {
+    padding-bottom: 165px; }
+
+  .article-interview-details {
+    clear: both; } }
+@media (min-width: 992px) {
+  .table-interview-details {
+    text-align: left; } }
+@media (min-width: 1200px) {
+  .candidate-img-large {
+    margin-right: 10px; }
+
+  .table-candidate-details tr {
+    line-height: 30px; }
+
+  .article-candidate-details {
+    padding-bottom: 230px; } }
+
+/*# sourceMappingURL=details.css.map */
