@@ -3,6 +3,7 @@
 var view = (function () {
     const DOM_elements = {
         inputSearchElement: document.querySelector("#search-candidates"),
+        linkListToDetailsPage : document.querySelectorAll(".card-content-name")
     }
 
     function displayCandidateCard(candidate) {

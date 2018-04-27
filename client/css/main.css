@@ -71,7 +71,8 @@ hr {
 
 .card-content-name {
   font-size: 1.4rem;
-  margin: 0 auto; }
+  margin: 0 auto;
+  cursor: pointer; }
 
 .card-content-email {
   padding: 10px;

@@ -11,6 +11,7 @@ button {
 
 .candidate-img-large {
     width: 100%;
+    margin-bottom: 30px;
 }
 
 .table-candidate-details {
@@ -73,16 +74,20 @@ tr:nth-of-type(even) {
         width: 33%;
         float: left;
         margin-right: 5px;
+        margin-bottom: 30px;
     }
     .table-candidate-details {
         float: left;
         width: 66%;
-        padding: 20px 0;
+        padding: 50px 0 100px 0;
         td {
             width: 50%;
         }
         tr:nth-of-type(even) {
             padding-left: 30px;
+        }
+        tr {
+            line-height: 20px;
         }
     }
     .article-candidate-details {
@@ -97,16 +102,18 @@ tr:nth-of-type(even) {
     .table-interview-details {
         text-align: left;
     }
+    .table-candidate-details {
+        font-size: $text-title-size;
+        tr {
+            line-height: 40px;
+        }
+    }
 }
 
 @media (min-width:1200px) {
     .candidate-img-large {
         margin-right: 10px;
-    }
-    .table-candidate-details {
-        tr {
-            line-height: 30px;
-        }
+        margin-bottom: 30px;
     }
     .article-candidate-details {
         padding-bottom: 230px;

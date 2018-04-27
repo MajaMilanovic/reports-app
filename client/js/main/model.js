@@ -22,9 +22,18 @@ var model = (function () {
         return entitiesList;
     }
 
+    function setCandidateListToLocalStorage(list) {
+        list.forEach(function (candidate) {
+            var name = candidate.name;
+            var content = JSON.stringify(candidate);
+            localStorage.setItem(name, content);
+        })
+    }
+
     return {
         candidate: Candidate,
         url: url,
-        makeCandidateEntities: makeCandidateEntities
+        makeCandidateEntities: makeCandidateEntities,
+        setCandidateListToLocalStorage: setCandidateListToLocalStorage
     }
 })();

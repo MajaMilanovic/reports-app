@@ -12,7 +12,10 @@ var controller = (function (data, ui) {
                 var candidateResponseList = JSON.parse(request.responseText);
                 var candidateInstancesList = data.makeCandidateEntities(candidateResponseList);
                 candidateList = candidateInstancesList;
+                
                 ui.displayCandidateList(candidateList);
+                data.setCandidateListToLocalStorage(candidateList);
+                populateSelectedCandidateToLocalStorage();
             }
         };
         request.onerror = function () {
@@ -37,6 +40,25 @@ var controller = (function (data, ui) {
             }
         })
     }
+
+    function openCandidateReportsPage(e) {
+        window.location.assign("./candidateReports.html");
+    };
+
+    function onLinkClick(e) {
+        var candidateName = e.target.textContent;
+        var candidateData = localStorage.getItem(candidateName);
+        localStorage.setItem("selectedCandidate", candidateData);
+        openCandidateReportsPage();
+    }
+
+    function populateSelectedCandidateToLocalStorage() {
+        var linkListToDetailsPage = document.querySelectorAll(".card-content-name");
+        linkListToDetailsPage.forEach(function (link) {
+            link.addEventListener("click", onLinkClick)
+        })
+    }
+
 
     function registerEvents() {
         fetchCandidateList(data.url.candidates);

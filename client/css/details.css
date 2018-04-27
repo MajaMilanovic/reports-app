@@ -7,7 +7,8 @@ button {
   background: none; }
 
 .candidate-img-large {
-  width: 100%; }
+  width: 100%;
+  margin-bottom: 30px; }
 
 .table-candidate-details {
   width: 100%; }
@@ -57,16 +58,19 @@ tr:nth-of-type(even) {
   .candidate-img-large {
     width: 33%;
     float: left;
-    margin-right: 5px; }
+    margin-right: 5px;
+    margin-bottom: 30px; }
 
   .table-candidate-details {
     float: left;
     width: 66%;
-    padding: 20px 0; }
+    padding: 50px 0 100px 0; }
     .table-candidate-details td {
       width: 50%; }
     .table-candidate-details tr:nth-of-type(even) {
       padding-left: 30px; }
+    .table-candidate-details tr {
+      line-height: 20px; }
 
   .article-candidate-details {
     padding-bottom: 165px; }
@@ -75,13 +79,16 @@ tr:nth-of-type(even) {
     clear: both; } }
 @media (min-width: 992px) {
   .table-interview-details {
-    text-align: left; } }
+    text-align: left; }
+
+  .table-candidate-details {
+    font-size: 1.4rem; }
+    .table-candidate-details tr {
+      line-height: 40px; } }
 @media (min-width: 1200px) {
   .candidate-img-large {
-    margin-right: 10px; }
-
-  .table-candidate-details tr {
-    line-height: 30px; }
+    margin-right: 10px;
+    margin-bottom: 30px; }
 
   .article-candidate-details {
     padding-bottom: 230px; } }
