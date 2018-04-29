@@ -1,0 +1,85 @@
+.modal-btn-holder {
+    text-align: center;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: $modalBackground;
+}
+
+.modal-message {
+    background-color: $modalMessageBackground;
+    margin: 10% auto;
+    padding: 20px;
+    border-radius: 5px 5px 0 0;
+    width: 50%;
+}
+
+.close {
+    background-color: $modalCloseBackground;
+    color: $modalCloseColor;
+    @include box-shadow($modalCloseShadowRadius);
+    text-align: center;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    padding-top: 3px;
+    float: right;
+    font-size: 18px;
+}
+
+.close:hover,
+.close:focus {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal-title {
+    padding-top: 5px;
+    font-size: $text-title-size;
+}
+
+.modal-hr {
+    color: $modalRuleColor;
+    margin-top: 25px;
+}
+
+.modal-details {
+    width: 50%;
+}
+
+dl {
+    display: inline-block;
+}
+
+dt {
+    color: $modalDescriptionTitlesColor;
+    font-size: $text-subTitle-size;
+}
+
+dd {
+    font-size: $text-title-size;
+    padding: 5px 0;
+    margin-bottom: 10px;
+}
+
+.modal-notes {
+    width: 50%;
+    display: inline-block;
+    float: right;
+}
+
+.modal-notes-title {
+    @extend dt;
+}
+
+.modal-notes-content {
+    font-size: $text-subTitle-size;
+    padding: 5px 0;
+}

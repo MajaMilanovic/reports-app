@@ -61,18 +61,96 @@ var view = (function () {
             $interviewContent.append($interviewDate);
             $interviewContent.append($interviewStatus);
 
-            var $buttonModal = $("<td><button>&#128065;</button></td>").addClass("button-open-modal");
-            $interviewContent.append($buttonModal);
+            var $modalHolder = $("<td>").addClass("modal-btn-holder");
+            var $buttonModal = $("<button>");
+            $buttonModal.addClass("button-open-modal");
+            $buttonModal.attr("name", report.id);
+
+            var $buttonImg = $("<img>").attr("src", "https://png.pngtree.com/element_pic/17/09/29/06d15012511c08810906bf207e3b2c14.jpg");
+            $buttonImg.css({
+                "width": "20px",
+                "height": "20px"
+            });
+
+            $buttonModal.append($buttonImg);
+
+            $modalHolder.append($buttonModal);
+            $interviewContent.append($modalHolder);
 
             $DOM_Elements.tableInterviewDetails.append($interviewContent);
+
+            createModal(report);
         })
 
     };
 
+    function createModal(data) {
+        var $modal = $("<div>");
+        $modal.addClass("modal");
+        $modal.addClass("hidden");
+        $modal.attr("id", data.id);
+
+        var $modalMessage = $("<div>");
+        $modalMessage.addClass("modal-message");
+
+        var $modalClose = $("<span>");
+        $modalClose.text("X");
+        $modalClose.addClass("close");
+
+        var $modalContent = $("<div>").addClass("modal-title");
+        $modalContent.text(data.candidateName);
+        $modalContent.append($("<hr>").addClass("modal-hr"));
+
+        var $modalInterviewDetails = $("<dl>").addClass("modal-details");
+
+        var $company = $("<dt>").text("Company");
+        $modalInterviewDetails.append($company);
+
+        var $companyName = $("<dd>").text(data.companyName);
+        $modalInterviewDetails.append($companyName);
+
+        var $date = $("<dt>").text("Interview Date");
+        $modalInterviewDetails.append($date);
+
+        var $interviewDate = $("<dd>").text(data.interviewDate());
+        $modalInterviewDetails.append($interviewDate);
+
+        var $phase = $("<dt>").text("Phase");
+        $modalInterviewDetails.append($phase);
+
+        var $interviewPhase = $("<dd>").text(capitalizeFirstLetter(data.phase));
+        $modalInterviewDetails.append($interviewPhase);
+
+        var $status = $("<dt>").text("Status");
+        $modalInterviewDetails.append($status);
+
+        var $interviewStatus = $("<dd>").text(capitalizeFirstLetter(data.status));
+        $modalInterviewDetails.append($interviewStatus);
+
+        var $modalNotes = $("<div>").addClass("modal-notes");
+        var $notesTitle = $("<p>").text("Notes").addClass("modal-notes-title");
+        $modalNotes.append($notesTitle);
+        var $notesContent = $("<p>").text(data.note).addClass("modal-notes-content");
+        $modalNotes.append($notesContent);
+
+        $modalContent.append($modalInterviewDetails);
+        $modalContent.append($modalNotes);
+
+        $modalMessage.append($modalClose);
+        $modalMessage.append($modalContent);
+        $modal.append($modalMessage);
+        $("body").append($modal);
+    };
+
+    function capitalizeFirstLetter(word) {
+        return (word[0]).toUpperCase() + word.slice(1);
+    }
+
     return {
         displayCandidateData: displayCandidateData,
         displayCandidateImage: displayCandidateImage,
-        displayCandidateReport: displayCandidateReport
+        displayCandidateReport: displayCandidateReport,
+        createModal: createModal
     }
 
 })();

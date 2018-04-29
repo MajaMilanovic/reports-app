@@ -1,0 +1,54 @@
+.candidate-img-large {
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+.table-candidate-details {
+    width: 100%;
+}
+
+.table-candidate-details td {
+    padding: 5px 0;
+}
+
+tr:nth-of-type(even) {
+    padding-left: 10px;
+}
+
+.table-title-small {
+    font-size: $text-subTitle-size;
+    color: $text-subTitle-color;
+}
+
+.table-content td {
+    padding-left: 20px;
+}
+
+.p-title {
+    font-size: $text-title-size;
+    margin-bottom: 20px;
+    clear: both;
+}
+
+.table-interview-details {
+    margin: 0 auto 20px auto;
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+    text-align: center;
+    td {
+        border: 1px solid $tableBorders;
+        margin: 0;
+        font-size: $text-subTitle-size;
+        padding: 10px;
+    }
+    tr:nth-of-type(odd) {
+        background-color: $tableCellBackground;
+    }
+}
+
+.table-interview-details-header td {
+    vertical-align: baseline;
+    padding: 10px;
+    background-color: $tableInterviewBackground;
+}
