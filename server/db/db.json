@@ -1,7 +1,5 @@
-
 {
-    "companies": [
-        {
+    "companies": [{
             "id": 34149463,
             "name": "Wintheiser - Padberg",
             "email": "Carolina.Ryan@gmail.com"
@@ -32,8 +30,7 @@
             "email": "Kaci_Davis@yahoo.com"
         }
     ],
-    "candidates": [
-        {
+    "candidates": [{
             "id": 9451057,
             "name": "Zula Feeney",
             "birthday": "Tue Sep 12 2017 16:57:16 GMT+0200 (CEST)",
@@ -98,8 +95,7 @@
             "avatar": "https://instagram.fbeg2-1.fna.fbcdn.net/vp/4b70cfd7a3639ad5e6fa4a47c93317d7/5B678DE3/t51.2885-15/e35/28763050_369745676835292_2400936368285941760_n.jpg"
         }
     ],
-    "reports": [
-        {
+    "reports": [{
             "id": 33060290,
             "candidateId": 9451057,
             "candidateName": "Zula Feeney",
@@ -129,8 +125,30 @@
             "companyName": "Krajcik Inc",
             "interviewDate": "Fri Jan 12 2018 08:39:19 GMT+0100 (CET)",
             "phase": "cv",
-            "status": "declined",
+            "status": "passed",
             "note": "Velit facilis sint pariatur et accusantium. Quia consectetur quo distinctio vel quae voluptas aliquam id. Qui fugit blanditiis consequatur porro qui est."
+        },
+        {
+            "id": 62439440,
+            "candidateId": 82647435,
+            "candidateName": "Laki the Cat",
+            "companyId": 92859858,
+            "companyName": "Volkman - Schimmel",
+            "interviewDate": "Fri Jan 11 2018 15:23:09 GMT+0100 (CET)",
+            "phase": "tech",
+            "status": "passed",
+            "note": "Suscipit dolores sed consectetur natus quaerat laboriosam id est quam. Nihil dolor iusto quisquam expedita. Itaque aut sed magnam doloremque numquam culpa nostrum blanditiis. Est non impedit architecto error commodi. Dignissimos fugiat eum voluptatem. Libero quisquam repellat."
+        },
+        {
+            "id": 62437440,
+            "candidateId": 82622435,
+            "candidateName": "Paki the Cat",
+            "companyId": 11081915,
+            "companyName": "Krajcik Inc",
+            "interviewDate": "Fri Jan 11 2018 15:23:09 GMT+0100 (CET)",
+            "phase": "tech",
+            "status": "passed",
+            "note": "Suscipit dolores sed consectetur natus quaerat laboriosam id est quam. Nihil dolor iusto quisquam expedita. Itaque aut sed magnam doloremque numquam culpa nostrum blanditiis. Est non impedit architecto error commodi. Dignissimos fugiat eum voluptatem. Libero quisquam repellat."
         }
     ]
 }

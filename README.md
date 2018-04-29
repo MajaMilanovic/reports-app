@@ -14,7 +14,7 @@ Second task is to create admin panel which is used for report creation.
 Both tasks should be implemented as standalone (separate) applications. But they will use same API for
 getting data and creating new reports.
 Reports API
-Regarding interviews reports API you will be using local web server. Complete API which is needed for developing your tasks can be found at: https://github.com/nenadbugaric/interviews-reports-api-mock. On github repository page you will find all information about how to start web server and how to use API locally for development.
+Regarding interviews reports API you will be using local web server. Complete API which is needed for developing your tasks can be found at: https://goo.gl/xXFvCa. On github repository page you will find all information about how to start web server and how to use API locally for development.
 
 1. Candidates and Interview Reports overview
 Implement responsive public web application, which can be used by anyone, and which is responsible for read-only  overview of Candidates and Interview Reports.
