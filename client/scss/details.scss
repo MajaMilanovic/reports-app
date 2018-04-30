@@ -14,11 +14,18 @@ button {
 }
 
 @media(min-width:768px) {
+    .modal-message {
+        width: 50%;
+        border-radius: 5px 5px 0 0;
+    }
     .candidate-img-large {
         width: 33%;
         float: left;
         margin-right: 5px;
         margin-bottom: 30px;
+    }
+    .table-content{
+        font-size: 1rem;
     }
     .table-candidate-details {
         float: left;
