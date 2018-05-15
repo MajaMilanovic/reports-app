@@ -1,0 +1,28 @@
+@import "mixins";
+@import "variables";
+@import "basics";
+.main-page-title-bar {
+    padding: 8px 0;
+    background-color: $header-color;
+    overflow: auto;
+}
+
+.main-page-title {
+    display: inline-block;
+}
+
+.main-page-title-div {
+    display: inline-block;
+    float: right;
+    clear: both;
+}
+
+.main-page-title-link {
+    font-size: $text-subTitle-size;
+    padding: 5px 35px;
+    border: 1px solid $text-subTitle-color;
+}
+
+.link-disabled {
+    background-color: $link-disabled-color;
+}

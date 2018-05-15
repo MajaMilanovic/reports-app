@@ -1,0 +1,29 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif; }
+
+.container {
+  width: 90%;
+  margin: 0 auto; }
+
+a:not(#next-page-link),
+a:link:not(#next-page-link),
+a:visited:not(#next-page-link),
+a:hover:not(#next-page-link),
+a:active:not(#next-page-link) {
+  text-decoration: none;
+  color: inherit; }
+
+#search-candidates {
+  font-size: 0.8rem;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  border-radius: 20px;
+  background-image: url(http://www.metacritic.com/images/icons/search_active.png);
+  background-repeat: no-repeat;
+  padding: 5px 5px 5px 30px;
+  background-position: 5px 5px; }
+
+/*# sourceMappingURL=search.css.map */

@@ -1,0 +1,161 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif; }
+
+.container {
+  width: 90%;
+  margin: 0 auto; }
+
+a:not(#next-page-link),
+a:link:not(#next-page-link),
+a:visited:not(#next-page-link),
+a:hover:not(#next-page-link),
+a:active:not(#next-page-link) {
+  text-decoration: none;
+  color: inherit; }
+
+.candidate-card-wrapper {
+  padding: 10px;
+  float: left;
+  margin-top: 20px;
+  width: 100%; }
+  @media (min-width: 992px) {
+    .candidate-card-wrapper {
+      display: inline-block;
+      width: 50%;
+      padding-right: 0; } }
+
+.candidate-card, .candidate-card-selected {
+  background-color: #e8eaf6;
+  overflow: auto;
+  cursor: pointer; }
+
+.candidate-card-selected {
+  background-color: #c8c8ff;
+  border: blue; }
+
+.candidate-avatar-wrapper {
+  display: inline-block;
+  float: left; }
+  .candidate-avatar-wrapper img {
+    width: 100px;
+    height: 100px;
+    padding: 10px;
+    border-radius: 50%; }
+
+.candidate-card-content p:last-child {
+  font-size: 50%;
+  color: #444444; }
+
+.candidate-card-content {
+  display: inline-block;
+  float: left;
+  padding: 10px;
+  margin-top: 20px;
+  width: 50%; }
+  .candidate-card-content p {
+    font-size: 70%;
+    margin: 5px 0;
+    color: #0e0e0e; }
+
+#next-page-link, .select-company-button-holder p {
+  text-decoration: none;
+  float: right; }
+
+.next-link, .next-link-disabled {
+  color: white;
+  text-transform: uppercase;
+  padding: 10px 20px;
+  margin-top: 10%;
+  background-color: #2196f3; }
+
+.next-link-disabled {
+  cursor: text;
+  background-color: #f7f7f7;
+  color: #b9b9b9; }
+
+.create-report-wrapper {
+  margin: 30px 0;
+  width: 100%; }
+
+.create-report-menu-title {
+  display: inline-block;
+  margin-left: 10px;
+  font-size: 1rem; }
+
+.number-circle {
+  display: inline-block;
+  border-radius: 50%;
+  border: 1px solid #0e0e0e; }
+  .number-circle p {
+    text-align: center;
+    padding: 7px;
+    width: 30px;
+    height: 30px;
+    font-size: 16px; }
+
+.create-report-menu, .create-report-candidateList-container {
+  display: inline-block;
+  width: 100%; }
+  @media (min-width: 768px) {
+    .create-report-menu, .create-report-candidateList-container {
+      float: left;
+      width: 30%; } }
+
+li {
+  list-style-type: none; }
+
+.create-report-menu-item, .create-report-menu-item-active {
+  margin: 20px;
+  color: #444444; }
+
+.create-report-menu-item-active {
+  color: #0e0e0e;
+  font-weight: bolder; }
+
+.create-report-candidateList-container {
+  padding-bottom: 10%;
+  margin-bottom: 10%; }
+  @media (min-width: 768px) {
+    .create-report-candidateList-container {
+      float: right;
+      width: 70%;
+      border-left: 1px solid #0e0e0e;
+      padding: 0 20px;
+      padding-right: 0; } }
+
+@media (min-width: 768px) {
+  .create-report-search-holder {
+    float: right; } }
+
+.candidate-list-holder {
+  clear: both; }
+
+.create-report-menu-hr {
+  width: 80%;
+  margin-bottom: 10px; }
+
+.create-report-menu-selected-item {
+  padding: 20px 0 0 20px; }
+  .create-report-menu-selected-item p {
+    margin-bottom: 10px; }
+
+.create-report-company-list-holder {
+  clear: both;
+  padding: 50px 0; }
+
+.create-report-company-list li {
+  padding: 10px;
+  border: 1px solid #0e0e0e; }
+.create-report-company-list li:hover {
+  cursor: pointer; }
+.create-report-company-list .company-selected {
+  background-color: #b9b9b9;
+  color: white; }
+
+.select-company-button-holder p:first-child {
+  float: left; }
+
+/*# sourceMappingURL=reportCreationPage.css.map */

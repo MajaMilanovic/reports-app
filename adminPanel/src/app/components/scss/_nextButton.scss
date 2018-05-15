@@ -1,0 +1,19 @@
+#next-page-link {
+    text-decoration: none;
+    float: right;
+}
+
+.next-link {
+    color: white;
+    text-transform: uppercase;
+    padding: 10px 20px;
+    margin-top: 10%;
+    background-color: $button-blue;
+}
+
+.next-link-disabled {
+    @extend .next-link;
+    cursor: text;
+    background-color: $link-disabled-color;
+    color: $text-subTitle-color;
+}

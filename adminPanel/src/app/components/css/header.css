@@ -1,0 +1,40 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif; }
+
+.container {
+  width: 90%;
+  margin: 0 auto; }
+
+a:not(#next-page-link),
+a:link:not(#next-page-link),
+a:visited:not(#next-page-link),
+a:hover:not(#next-page-link),
+a:active:not(#next-page-link) {
+  text-decoration: none;
+  color: inherit; }
+
+.main-page-title-bar {
+  padding: 8px 0;
+  background-color: #f0f0f0;
+  overflow: auto; }
+
+.main-page-title {
+  display: inline-block; }
+
+.main-page-title-div {
+  display: inline-block;
+  float: right;
+  clear: both; }
+
+.main-page-title-link {
+  font-size: 0.8rem;
+  padding: 5px 35px;
+  border: 1px solid #b9b9b9; }
+
+.link-disabled {
+  background-color: #f7f7f7; }
+
+/*# sourceMappingURL=header.css.map */

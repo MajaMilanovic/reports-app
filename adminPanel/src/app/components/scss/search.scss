@@ -1,0 +1,14 @@
+@import "mixins";
+@import "variables";
+@import "basics";
+
+.search-bar-wrapper {}
+
+#search-candidates {
+    font-size: $text-subTitle-size;
+    @include border-radius($search-border-radius);
+    background-image: url(http://www.metacritic.com/images/icons/search_active.png);
+    background-repeat: no-repeat;
+    padding: 5px 5px 5px 30px;
+    background-position: 5px 5px;
+}

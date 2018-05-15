@@ -1,0 +1,22 @@
+@import "mixins";
+@import "variables";
+@import "basics";
+.button-logOut {
+    @include border-radius($avatar-border-radius);
+    padding: 10px;
+    width: 50px;
+    height: 50px;
+    color: rgb(255, 255, 255);
+    background-color: rgb(255, 0, 0);
+    text-align: center;
+    cursor: pointer;
+    @include box-shadow($button-shadow-radius);
+    position: fixed;
+    z-index: 1;
+    bottom: 60px;
+    right: 25px;
+    @media (min-width: 768px) {
+        bottom: 20px;
+        right: 70px;
+    }
+}

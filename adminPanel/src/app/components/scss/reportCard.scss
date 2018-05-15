@@ -1,0 +1,64 @@
+@import "mixins";
+@import "variables";
+@import "basics";
+@import "modals";
+.report-card-wrapper-div {
+    width: 100%;
+    margin: 20px 0;
+    @include box-shadow($card-shadow-radius);
+    padding: 20px;
+}
+
+.report-card-content-div div:not(.modal-message) {
+    display: inline-block;
+    overflow: auto;
+    p {
+        width: 100%;
+    }
+    margin: 20px 10px;
+    padding: 10px;
+    @media (min-width: 992px) {
+        margin: 0;
+        margin-right: 10px;
+        padding: 5px 15px 5px 5px;
+        p {
+            width: auto;
+        }
+    }
+    @media (min-width: 1200px) {
+        padding: 5px 25px 5px 5px;
+    }
+    .modal-notes {
+        margin: 0;
+    }
+}
+
+.report-name-description {
+    color: $text-subTitle-color;
+    font-size: $text-subTitle-size;
+    margin: 5px;
+}
+
+.report-card-content-div .report-name-div {
+    @media (min-width: 992px) {
+        border-right: 1px solid $tableBorders;
+        width: 30%;
+    }
+    @media (min-width: 1200px) {
+        width: 33%;
+    }
+}
+
+.report-date-div,
+.report-status-div {
+    @media (min-width: 992px) {
+        border-right: 1px solid $tableBorders;
+    }
+}
+
+.img-open-modal img {
+    width: 25px;
+    height: 25px;
+    vertical-align: super;
+    cursor: pointer;
+}

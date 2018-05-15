@@ -1,0 +1,31 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-size: 1.2rem;
+}
+
+input {
+    margin: 25px 5px 0 5px;
+    padding: 5px;
+}
+
+button {
+    @extend input;
+    padding: 0 20px;
+    width: 100px;
+}
+
+.is-log-message {
+    margin-top: 20px;
+    color: green;
+}
+
+.not-log-message {
+    @extend .is-log-message;
+    color: red;
+}
+
+.button-holder {
+    margin-top: 25px;
+}

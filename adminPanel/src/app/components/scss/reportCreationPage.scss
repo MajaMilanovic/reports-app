@@ -1,0 +1,116 @@
+@import "mixins";
+@import "variables";
+@import "basics";
+@import "candidate-card";
+@import "nextButton";
+.create-report-wrapper {
+    margin: 30px 0;
+    width: 100%;
+}
+
+.create-report-menu-title {
+    display: inline-block;
+    margin-left: 10px;
+    font-size: 1rem;
+}
+
+.number-circle {
+    display: inline-block;
+    border-radius: 50%;
+    p {
+        text-align: center;
+        padding: 7px;
+        width: 30px;
+        height: 30px;
+        font-size: 16px;
+    }
+    border: 1px solid $linkColor;
+}
+
+.create-report-menu {
+    display: inline-block;
+    width: 100%;
+    @media(min-width: 768px) {
+        float: left;
+        width: 30%;
+    }
+}
+
+li {
+    list-style-type: none;
+}
+
+.create-report-menu-item {
+    margin: 20px;
+    color: $text-mail-color;
+}
+
+.create-report-menu-item-active {
+    @extend .create-report-menu-item;
+    color: $linkColor;
+    font-weight: bolder;
+}
+
+.create-report-candidateList-container {
+    @extend .create-report-menu;
+    padding-bottom: 10%;
+    margin-bottom: 10%;
+    @media(min-width: 768px) {
+        float: right;
+        width: 70%;
+        border-left: 1px solid $linkColor;
+        padding: 0 20px;
+        padding-right: 0;
+    }
+}
+
+.create-report-search-holder {
+    @media(min-width: 768px) {
+        float: right;
+    }
+}
+
+.candidate-list-holder {
+    clear: both;
+}
+
+.create-report-menu-hr {
+    width: 80%;
+    margin-bottom: 10px;
+}
+
+.create-report-menu-selected-item {
+    padding: 20px 0 0 20px;
+    p {
+        margin-bottom: 10px;
+    }
+}
+
+.create-report-company-list-holder {
+    clear: both;
+    padding: 50px 0;
+}
+
+.create-report-company-list {
+    li {
+        padding: 10px;
+        border: 1px solid $linkColor;
+    }
+    li:hover {
+        cursor: pointer;
+    }
+    .company-selected {
+        background-color: $text-subTitle-color;
+        color: white;
+    }
+}
+
+.select-company-button-holder {
+    p {
+        @extend #next-page-link;
+    }
+}
+
+.select-company-button-holder p:first-child {
+    float: left;
+}
