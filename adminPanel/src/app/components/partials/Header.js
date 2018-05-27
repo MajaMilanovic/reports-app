@@ -15,8 +15,8 @@ class Header extends Component {
                             ? <Link to="/" className="link-disabled main-page-title-link">Reports</Link>
                             : <Link to="/" className="main-page-title-link">Reports</Link>}
                         {(routeData.match.url.indexOf("/reports")!==(-1))
-                            ? <Link to="/reports/candidates/1" className="link-disabled main-page-title-link">Create Report</Link>
-                            : <Link to="/reports/candidates/1" className="main-page-title-link">Create Report</Link>}
+                            ? <Link to="/candidates/1" className="link-disabled main-page-title-link">Create Report</Link>
+                            : <Link to="/candidates/1" className="main-page-title-link">Create Report</Link>}
 
                     </div>
                 </div>

@@ -19,14 +19,20 @@ class CreateReportFillDetails extends Component {
 
     }
 
+    getInputDateValue = (e) => {
+        console.log(e.target.value);
+
+    }
+
     render() {
-        const { selectedCandidateName } = this.props;
+        const { pathname, getData } = this.props;
+
         return (
             <div className="fill-details-holder">
                 <div className="fill-details-inputs">
                     <div className="input-holder">
                         <p className="report-name-description" >Interview date : </p>
-                        <input type="date" className="input-fields" />
+                        <input type="date" className="input-fields" onChange={this.getInputDateValue} />
                     </div>
                     <div className="input-holder">
                         <p className="report-name-description" >Phase : </p>
@@ -48,7 +54,7 @@ class CreateReportFillDetails extends Component {
                     <p className="report-name-description">Notes : </p>
                     <textarea name="notes" cols="80" rows="10" value={this.state.notes} onChange={this.getTextAreaValue}></textarea>
                 </div>
-                <ButtonNavigation selectedCandidateName={selectedCandidateName} />
+                <ButtonNavigation getData={getData} pathname={pathname} />
             </div>
         )
     }

@@ -3,7 +3,7 @@ import { Search } from "../partials/Search";
 import { fetchData } from "../../../service/fetchService";
 import { Company } from "../../../entities/Company";
 import { Link } from "react-router-dom";
-
+import { helpers } from "../../../helpers";
 
 class CreateReportCompanySelection extends Component {
     constructor() {
@@ -11,7 +11,8 @@ class CreateReportCompanySelection extends Component {
         this.state = {
             searchValue: "",
             companyList: [],
-            selectedCompanyName: ""
+            selectedCompanyName: "",
+            companyId: ""
         };
     };
 
@@ -35,18 +36,20 @@ class CreateReportCompanySelection extends Component {
     }
 
     selectCompany = (e) => {
-        const { getSelectedCompanyName } = this.props;
         const name = e.target.id;
+        const companyId = e.target.title;
+
         this.setState({
-            selectedCompanyName: name
+            selectedCompanyName: name,
+            companyId
         });
-        getSelectedCompanyName(name);
     };
 
 
     render() {
-        const { companyList, searchValue, selectedCompanyName } = this.state;
+        const { companyList, searchValue, selectedCompanyName, companyId } = this.state;
         const { pathname } = this.props;
+
         return (
             <div className="create-report-candidateList-container">
                 <div className="create-report-search-holder"><Search getSearchInputValue={this.getSearchInputValue} /></div>
@@ -58,6 +61,7 @@ class CreateReportCompanySelection extends Component {
                                     return company.name.toLowerCase().includes(searchValue.trim().toLowerCase())
                                 }).map(company => {
                                     return <li key={company.id} id={company.name}
+                                        title={company.id}
                                         onClick={this.selectCompany}
                                         className={(selectedCompanyName === company.name) ? "company-selected" : ""}
                                     >{company.name}</li>
@@ -68,10 +72,12 @@ class CreateReportCompanySelection extends Component {
                 <div className="select-company-button-holder">
                     {(!selectedCompanyName)
                         ? <Fragment>
-                            <p className="next-link"><Link to="/reports/candidates/1">Back</Link></p> <p className="next-link-disabled">Next</p>
+                            <p className="next-link"><Link to="/candidates/1">Back</Link></p> <p className="next-link-disabled">Next</p>
                         </Fragment>
                         : <Fragment>
-                            <p className="next-link"><Link to="/reports/candidates/1">Back</Link></p> <Link to={`/reports/${3}/${pathname.slice(19)}/${selectedCompanyName}`} id="next-link-right" className="next-link">Next</Link>
+                            <p className="next-link"><Link to="/candidates/1">Back</Link> </p>
+                            <Link to={`/details/${helpers.getDataFromCompaniesPathname(pathname).id}/${helpers.getDataFromCompaniesPathname(pathname).name}/${selectedCompanyName}/${companyId}`}
+                                id="next-link-right" className="next-link">Next</Link>
                         </Fragment>}
                 </div>
 

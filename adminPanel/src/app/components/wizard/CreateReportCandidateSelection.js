@@ -6,8 +6,8 @@ import { Candidate } from "../../../entities/Candidate";
 import { Link } from "react-router-dom";
 
 class CreateReportCandidateSelection extends Component {
-    constructor() {
-        super();
+    constructor(props) {
+        super(props);
         this.state = {
             searchValue: "",
             candidateList: [],
@@ -72,7 +72,8 @@ class CreateReportCandidateSelection extends Component {
                 </div>
                 {(!this.state.candidateID)
                     ? <p id="next-page-link" className="next-link-disabled">Next</p>
-                    : <Link to={`/reports/companies/${this.getCandidateNameFromList()}`} id="next-page-link" className="next-link">Next</Link>}
+                    : <Link to={`/companies/${candidateID}/${this.getCandidateNameFromList()}`}
+                        id="next-page-link" className="next-link">Next</Link>}
             </div>
         );
     };

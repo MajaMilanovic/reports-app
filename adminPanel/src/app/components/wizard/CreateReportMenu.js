@@ -5,17 +5,12 @@ class CreateReportMenu extends Component {
     constructor(props) {
         super(props);
     }
-
-    componentDidMount() {
-        const { pathname, getSelectedCandidateName } = this.props;
-        getSelectedCandidateName(helpers.getCandidateNameFromString(pathname).candidateName);
-    }
-
     render() {
         const { pathname, getSelectedCandidateName } = this.props;
+
         return (
             <ul className="create-report-menu">
-                {(pathname === "/reports/candidates/1")
+                {(pathname === "/candidates/1")
                     ? <li className="create-report-menu-item-active">
                         <div className="number-circle"><p>1</p></div>
                         <p className="create-report-menu-title">Select Candidate</p>
@@ -33,7 +28,7 @@ class CreateReportMenu extends Component {
                         <div className="number-circle"><p>2</p></div>
                         <p className="create-report-menu-title">Select Company</p>
                     </li>}
-                {(pathname.indexOf("reports/3") !== (-1))
+                {(pathname.indexOf("details") !== (-1))
                     ? <li className="create-report-menu-item-active">
                         <div className="number-circle"><p>3</p></div>
                         <p className="create-report-menu-title">Fill Report Details</p>
@@ -47,20 +42,20 @@ class CreateReportMenu extends Component {
                         ? <li className="create-report-menu-selected-item">
                             <hr className="create-report-menu-hr" />
                             <p className="report-name-description">Candidate : </p>
-                            {pathname.slice(19)}</li>
+                            {helpers.getDataFromCompaniesPathname(pathname).name}</li>
                         : ""
                 }
                 {
-                    (pathname.indexOf("reports/3") !== (-1))
+                    (pathname.indexOf("details") !== (-1))
                         ? <Fragment>
                             <li className="create-report-menu-selected-item">
                                 <hr className="create-report-menu-hr" />
                                 <p className="report-name-description">Candidate : </p>
-                                {helpers.getCandidateNameFromString(pathname).candidateName}</li>
+                                {helpers.getDataFromDetailsPathname(pathname).candidateName}</li>
                             <li className="create-report-menu-selected-item">
                                 <hr className="create-report-menu-hr" />
                                 <p className="report-name-description">Company : </p>
-                                {helpers.getCandidateNameFromString(pathname).companyName}</li>
+                                {helpers.getDataFromDetailsPathname(pathname).companyName}</li>
                         </Fragment>
                         : ""
                 }

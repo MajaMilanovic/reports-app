@@ -10,9 +10,9 @@ const MainItem = () => {
     return (
             <Switch>
                 <Route path="/login" component={NoAuthenticate(LoginForm)} />
-                <Route exact path="/reports/candidates/1" component={Authenticate(ReportCreationPage)} />
-                <Route exact path="/reports/companies/:name" component={Authenticate(ReportCreationPage)} />
-                <Route exact path="/reports/:step/:name/:companyName" component={Authenticate(ReportCreationPage)} />
+                <Route exact path="/candidates/1" component={Authenticate(ReportCreationPage)} />
+                <Route exact path="/details/:id/:name/:companyName/:companyId" component={Authenticate(ReportCreationPage)} />
+                <Route exact path="/companies/:id/:name/" component={Authenticate(ReportCreationPage)} />
                 <Route path="/" component={Authenticate(FeedPage)} />
             </Switch>
     );
