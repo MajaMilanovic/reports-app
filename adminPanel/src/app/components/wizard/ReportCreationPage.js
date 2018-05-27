@@ -12,7 +12,7 @@ class ReportCreationPage extends Component {
         super();
     }
 
-    getData = () => {
+    getCandidateCompanyData = () => {
         const { pathname } = this.props.location;
 
         const candidate = helpers.getDataFromDetailsPathname(pathname).candidateName;
@@ -25,10 +25,6 @@ class ReportCreationPage extends Component {
             "candidateName": candidate,
             "companyId": companyId,
             "companyName": company,
-            "interviewDate": "",
-            "phase": "",
-            "status": "",
-            "note": "notes.."
         }
     }
 
@@ -48,7 +44,7 @@ class ReportCreationPage extends Component {
                         {(this.props.location.pathname.indexOf("/details/") !== (-1))
                             ? <CreateReportFillDetails
                                 pathname={this.props.location.pathname}
-                                getData={this.getData} />
+                                getData={this.getCandidateCompanyData} />
                             : ""}
                     </div>
                 </div>

@@ -141,13 +141,14 @@ li {
     width: 33%;
     padding: 10px;
     select {
-        height: 48px;
-        padding: 10px;
         option {
             overflow: auto;
         }
     }
     .input-fields {
+        padding: 10px;
+        height: 40px;
+        font-size: 16px;
         margin: 0;
         width: 100%;
     }

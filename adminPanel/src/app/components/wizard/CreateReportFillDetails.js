@@ -7,7 +7,7 @@ class CreateReportFillDetails extends Component {
         this.state = {
             date: "",
             phase: "",
-            Status: "",
+            status: "",
             notes: ""
         }
     }
@@ -16,12 +16,36 @@ class CreateReportFillDetails extends Component {
         this.setState({
             notes: e.target.value
         })
-
     }
 
     getInputDateValue = (e) => {
-        console.log(e.target.value);
+        const date = e.target.value;
+        this.setState({
+            date
+        })
+    }
 
+    getDropdownPhaseValue = (e) => {
+        const phase = e.target.value;
+        this.setState({
+            phase
+        })
+    }
+    getDropdownStatusValue = (e) => {
+        const status = e.target.value;
+        this.setState({
+            status
+        })
+    }
+
+    getInterviewData = () => {
+        const data = this.props.getData();
+        const { date, status, phase, notes } = this.state;
+        data.interviewDate = date;
+        data.phase = phase;
+        data.status = status;
+        data.note = notes;
+        return data;
     }
 
     render() {
@@ -36,15 +60,17 @@ class CreateReportFillDetails extends Component {
                     </div>
                     <div className="input-holder">
                         <p className="report-name-description" >Phase : </p>
-                        <select className="input-fields">
+                        <select className="input-fields" onChange={this.getDropdownPhaseValue}>
+                            <option value="">select phase</option>
                             <option value="hr">HR</option>
                             <option value="cv">CV</option>
-                            <option value="tech">Technical</option>
+                            <option value="technical">Technical</option>
                         </select>
                     </div>
                     <div className="input-holder">
                         <p className="report-name-description" >Status : </p>
-                        <select className="input-fields" required >
+                        <select className="input-fields" required onChange={this.getDropdownStatusValue}>
+                            <option value="">select status</option>
                             <option value="selected">Selected</option>
                             <option value="denied">Denied</option>
                         </select>
@@ -54,7 +80,7 @@ class CreateReportFillDetails extends Component {
                     <p className="report-name-description">Notes : </p>
                     <textarea name="notes" cols="80" rows="10" value={this.state.notes} onChange={this.getTextAreaValue}></textarea>
                 </div>
-                <ButtonNavigation getData={getData} pathname={pathname} />
+                <ButtonNavigation getData={this.getInterviewData} pathname={pathname} />
             </div>
         )
     }

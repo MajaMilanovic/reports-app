@@ -68,7 +68,8 @@ a:active:not(#next-page-link) {
   text-transform: uppercase;
   padding: 10px 20px;
   margin-top: 10%;
-  background-color: #2196f3; }
+  background-color: #2196f3;
+  cursor: pointer; }
 
 .next-link-disabled {
   cursor: text;
@@ -180,12 +181,12 @@ li {
   width: 33%;
   padding: 10px;
   margin: 20px; }
-  .input-holder select {
-    height: 48px;
-    padding: 10px; }
-    .input-holder select option {
-      overflow: auto; }
+  .input-holder select option {
+    overflow: auto; }
   .input-holder .input-fields {
+    padding: 10px;
+    height: 40px;
+    font-size: 16px;
     margin: 0;
     width: 100%; }
   @media (min-width: 768px) {

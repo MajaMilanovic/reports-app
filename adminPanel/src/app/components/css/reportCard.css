@@ -143,4 +143,18 @@ dd {
   vertical-align: super;
   cursor: pointer; }
 
+.report-card-content-div .delete-btn-holder div {
+  overflow: visible;
+  width: 30px;
+  height: 30px;
+  margin: 0;
+  padding: 0;
+  vertical-align: super;
+  cursor: pointer; }
+  .report-card-content-div .delete-btn-holder div p {
+    text-align: center;
+    border-radius: 50%;
+    font-size: 1.8rem;
+    color: red; }
+
 /*# sourceMappingURL=reportCard.css.map */
