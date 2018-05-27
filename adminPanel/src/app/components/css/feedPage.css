@@ -13,8 +13,7 @@ a:link:not(#next-page-link),
 a:visited:not(#next-page-link),
 a:hover:not(#next-page-link),
 a:active:not(#next-page-link) {
-  text-decoration: none;
-  color: inherit; }
+  text-decoration: none; }
 
 .button-logOut {
   -webkit-border-radius: 50%;

@@ -13,8 +13,7 @@ a:link:not(#next-page-link),
 a:visited:not(#next-page-link),
 a:hover:not(#next-page-link),
 a:active:not(#next-page-link) {
-  text-decoration: none;
-  color: inherit; }
+  text-decoration: none; }
 
 .candidate-card-wrapper {
   padding: 10px;
@@ -155,7 +154,47 @@ li {
   background-color: #b9b9b9;
   color: white; }
 
+.select-company-button-holder {
+  padding: 10px; }
+  .select-company-button-holder a {
+    color: white; }
+
 .select-company-button-holder p:first-child {
   float: left; }
+
+.select-company-button-holder a:last-child {
+  display: inline-block;
+  float: right; }
+
+.fill-details-holder {
+  display: inline-block; }
+  @media (min-width: 768px) {
+    .fill-details-holder {
+      padding-left: 20px;
+      border-left: 1px solid #0e0e0e;
+      float: left;
+      width: 70%; } }
+
+.input-holder {
+  display: inline-block;
+  width: 33%;
+  padding: 10px;
+  margin: 20px; }
+  .input-holder select {
+    height: 48px;
+    padding: 10px; }
+    .input-holder select option {
+      overflow: auto; }
+  .input-holder .input-fields {
+    margin: 0;
+    width: 100%; }
+  @media (min-width: 768px) {
+    .input-holder {
+      margin: 0; } }
+
+.textarea-holder {
+  padding: 10px; }
+  .textarea-holder textarea {
+    width: 100%; }
 
 /*# sourceMappingURL=reportCreationPage.css.map */

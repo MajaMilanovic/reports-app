@@ -14,7 +14,7 @@ a:not(#next-page-link),
 a:link:not(#next-page-link),
 a:visited:not(#next-page-link),
 a:hover:not(#next-page-link),
-a:active:not(#next-page-link) {
+a:active:not(#next-page-link),
+    {
     text-decoration: none;
-    color: inherit;
 }

@@ -4,13 +4,14 @@ import "../css/reportCreationPage.css";
 import { CreateReportMenu } from "./CreateReportMenu";
 import { CreateReportCandidateSelection } from "./CreateReportCandidateSelection";
 import { CreateReportCompanySelection } from "./CreateReportCompanySelection";
-import { SelectedCandidate } from "./SelectedCandidate";
+import { CreateReportFillDetails } from "./CreateReportFillDetails";
 
 class ReportCreationPage extends Component {
     constructor() {
         super();
         this.state = {
-            selectedCompanyName: ""
+            selectedCompanyName: "",
+            selectedCandidateName: ""
         }
     }
 
@@ -19,6 +20,10 @@ class ReportCreationPage extends Component {
             selectedCompanyName: name
         })
     }
+    getSelectedCandidateName = (candidateName) => {
+        const selectedCandidateName = candidateName;
+        this.setState({ selectedCandidateName });
+    }
 
     render() {
         return (
@@ -26,17 +31,15 @@ class ReportCreationPage extends Component {
                 <Header routeData={this.props} />
                 <div className="create-report-wrapper">
                     <div className="container">
+                        <CreateReportMenu pathname={this.props.location.pathname} getSelectedCandidateName={this.getSelectedCandidateName} />
                         {(this.props.location.pathname.indexOf("/reports/candidates/") !== (-1))
-                            ? <Fragment>
-                                <CreateReportMenu pathname={this.props.location.pathname} />
-                                < CreateReportCandidateSelection />
-                            </Fragment>
+                            ? < CreateReportCandidateSelection />
                             : ""}
                         {(this.props.location.pathname.indexOf("/reports/companies/") !== (-1))
-                            ? <Fragment>
-                                <CreateReportMenu pathname={this.props.location.pathname} />
-                                < CreateReportCompanySelection getSelectedCompanyName={this.getSelectedCompanyName} />
-                            </Fragment>
+                            ? < CreateReportCompanySelection getSelectedCompanyName={this.getSelectedCompanyName} pathname={this.props.location.pathname} />
+                            : ""}
+                        {(this.props.location.pathname.indexOf("/reports/3") !== (-1))
+                            ? <CreateReportFillDetails selectedCandidateName={this.state.selectedCandidateName} />
                             : ""}
                     </div>
                 </div>

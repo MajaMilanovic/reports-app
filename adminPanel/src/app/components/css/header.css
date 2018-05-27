@@ -13,8 +13,7 @@ a:link:not(#next-page-link),
 a:visited:not(#next-page-link),
 a:hover:not(#next-page-link),
 a:active:not(#next-page-link) {
-  text-decoration: none;
-  color: inherit; }
+  text-decoration: none; }
 
 .main-page-title-bar {
   padding: 8px 0;
@@ -32,7 +31,8 @@ a:active:not(#next-page-link) {
 .main-page-title-link {
   font-size: 0.8rem;
   padding: 5px 35px;
-  border: 1px solid #b9b9b9; }
+  border: 1px solid #b9b9b9;
+  color: black; }
 
 .link-disabled {
   background-color: #f7f7f7; }

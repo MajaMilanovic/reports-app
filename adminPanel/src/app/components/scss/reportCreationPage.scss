@@ -106,11 +106,60 @@ li {
 }
 
 .select-company-button-holder {
+    padding: 10px;
     p {
         @extend #next-page-link;
+    }
+    a {
+        color: white;
     }
 }
 
 .select-company-button-holder p:first-child {
     float: left;
+}
+
+.select-company-button-holder a:last-child {
+    display: inline-block;
+    float: right;
+}
+
+.fill-details-holder {
+    display: inline-block;
+    @media (min-width: 768px) {
+        padding-left: 20px;
+        border-left: 1px solid #0e0e0e;
+        float: left;
+        width: 70%;
+    }
+}
+
+.fill-details-inputs {}
+
+.input-holder {
+    display: inline-block;
+    width: 33%;
+    padding: 10px;
+    select {
+        height: 48px;
+        padding: 10px;
+        option {
+            overflow: auto;
+        }
+    }
+    .input-fields {
+        margin: 0;
+        width: 100%;
+    }
+    margin: 20px;
+    @media (min-width:768px) {
+        margin: 0;
+    }
+}
+
+.textarea-holder {
+    padding: 10px;
+    textarea {
+        width: 100%;
+    }
 }

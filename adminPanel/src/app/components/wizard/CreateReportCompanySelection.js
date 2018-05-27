@@ -46,7 +46,7 @@ class CreateReportCompanySelection extends Component {
 
     render() {
         const { companyList, searchValue, selectedCompanyName } = this.state;
-
+        const { pathname } = this.props;
         return (
             <div className="create-report-candidateList-container">
                 <div className="create-report-search-holder"><Search getSearchInputValue={this.getSearchInputValue} /></div>
@@ -71,7 +71,7 @@ class CreateReportCompanySelection extends Component {
                             <p className="next-link"><Link to="/reports/candidates/1">Back</Link></p> <p className="next-link-disabled">Next</p>
                         </Fragment>
                         : <Fragment>
-                            <p className="next-link"><Link to="/reports/candidates/1">Back</Link></p> <p className="next-link">Next</p>
+                            <p className="next-link"><Link to="/reports/candidates/1">Back</Link></p> <Link to={`/reports/${3}/${pathname.slice(19)}/${selectedCompanyName}`} id="next-link-right" className="next-link">Next</Link>
                         </Fragment>}
                 </div>
 
